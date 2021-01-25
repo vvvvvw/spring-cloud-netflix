@@ -36,6 +36,7 @@ public final class ZoneUtils {
 	 * @param host The host name to extract the host name from
 	 * @return The approximate zone
 	 */
+	//根据hostname推断出zone名字，用.分隔，第二个字符串
 	public static String extractApproximateZone(String host) {
 		String[] split = StringUtils.split(host, ".");
 		return split == null ? host : split[1];

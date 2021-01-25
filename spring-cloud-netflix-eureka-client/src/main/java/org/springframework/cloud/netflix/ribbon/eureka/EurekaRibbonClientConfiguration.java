@@ -52,6 +52,7 @@ import org.springframework.util.StringUtils;
  * @author Dave Syer
  * @author Ryan Baxter
  */
+//和ribbon整合
 @Configuration
 public class EurekaRibbonClientConfiguration {
 
@@ -96,6 +97,7 @@ public class EurekaRibbonClientConfiguration {
 		return ping;
 	}
 
+	//和ribbon整合，定义ServerList
 	@Bean
 	@ConditionalOnMissingBean
 	public ServerList<?> ribbonServerList(IClientConfig config,
